@@ -11,3 +11,20 @@ mp.events.addCommand('veh', (player : PlayerMp, _ , ...args) => {
     player.outputChatBox(`${args[0]} успешно заспавнен`);
     console.log('[SERVER] tpcoord was called');
 });
+
+mp.events.addCommand('tpcoord', (player : PlayerMp, _ , ...args) => {
+    if(args.length < 3){
+        player.outputChatBox("/tpcoord <x> <y> <z>");
+        return;
+    }
+    let x = args.map(Number);
+    if(player.vehicle){
+        let car = player.vehicle;
+        player.position = new mp.Vector3(x[0] , x[1] , x[2]);
+        car.position = new mp.Vector3(x[0] , x[1] , x[2]);
+        player.putIntoVehicle(car, 0);
+    }
+    player.position = new mp.Vector3(x[0] , x[1] , x[2]);
+    player.outputChatBox(`Вы были успешно телепортированы на координаты ${x[0]} ${x[1]} ${x[2]}`);
+    console.log('[SERVER] tpcoord was called');
+});
