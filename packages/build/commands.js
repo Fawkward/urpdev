@@ -1,7 +1,7 @@
 "use strict";
 mp.events.addCommand('veh', (player, _, ...args) => {
-    if (!args.some(x => x)) {
-        player.outputChatBox("/veh <car> <color1> <color2> <numberPlate>");
+    if (!args.some((x) => x)) {
+        player.outputChatBox('/veh <car> <color1> <color2> <numberPlate>');
         return;
     }
     let v = mp.vehicles.new(args[0], player.position, {
@@ -14,7 +14,7 @@ mp.events.addCommand('veh', (player, _, ...args) => {
 });
 mp.events.addCommand('tpcoord', (player, _, ...args) => {
     if (args.length < 3) {
-        player.outputChatBox("/tpcoord <x> <y> <z>");
+        player.outputChatBox('/tpcoord <x> <y> <z>');
         return;
     }
     let x = args.map(Number);
