@@ -30,17 +30,7 @@ mp.events.addCommand('tpcoord', (player : PlayerMp, _ : string, ...args : string
 });
 
 mp.events.addCommand('log', (player : PlayerMp, _ : string, ...args : string[]) =>{
-    checkChatMessage(player, _);
+    console.log(`${player.name}: ${_}`);
 });
 
 
-function checkChatMessage(player : PlayerMp, text : string) {
-    console.log(`${player.name}: ${text}`);
-};
-
-//mp.events.add("playerChat", checkChatMessage);
-
-
-// mp.events.add("playerChat", (player : PlayerMp, text : string) =>{
-//     console.log(`${player.name}: ${text}`);
-// });

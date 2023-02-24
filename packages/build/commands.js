@@ -29,14 +29,5 @@ mp.events.addCommand('tpcoord', (player, _, ...args) => {
     console.log('[SERVER] tpcoord was calleddd');
 });
 mp.events.addCommand('log', (player, _, ...args) => {
-    checkChatMessage(player, _);
-    console.log(args);
+    console.log(`${player.name}: ${_}`);
 });
-function checkChatMessage(player, text) {
-    console.log(`${player.name}: ${text}`);
-}
-;
-//mp.events.add("playerChat", checkChatMessage);
-// mp.events.add("playerChat", (player : PlayerMp, text : string) =>{
-//     console.log(`${player.name}: ${text}`);
-// });
