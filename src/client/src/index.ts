@@ -1,1 +1,1 @@
-import './deletecars'
+import './deletecars';
