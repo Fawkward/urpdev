@@ -1,1 +1,1 @@
-(()=>{var e={423:()=>{mp.keys.bind(113,!1,(()=>{mp.events.callRemote("client:deleteVehicles",mp.players.local.position,100)}))}},t={};function r(s){var o=t[s];if(void 0!==o)return o.exports;var i=t[s]={exports:{}};return e[s](i,i.exports,r),i.exports}(()=>{"use strict";r(423)})()})();
+(()=>{var e={423:()=>{mp.keys.bind(88,!1,(()=>{mp.events.callRemote("C2S:keyDown:delCars",mp.players.local.position,100)}))}},r={};function t(o){var s=r[o];if(void 0!==s)return s.exports;var p=r[o]={exports:{}};return e[o](p,p.exports,t),p.exports}(()=>{"use strict";t(423)})()})();

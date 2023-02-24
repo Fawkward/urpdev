@@ -9,7 +9,7 @@ mp.events.addCommand('veh', (player : PlayerMp, _ , ...args) => {
     v.setColor(parseInt(args[1]), parseInt(args[2]));
     player.putIntoVehicle(v,0);
     player.outputChatBox(`${args[0]} успешно заспавнен`);
-    console.log('[SERVER] tpcoord was called');
+    console.log(`[SERVER] veh был вызван огроком ${player.name}`);
 });
 
 mp.events.addCommand('tpcoord', (player : PlayerMp, _ , ...args) => {
@@ -26,5 +26,5 @@ mp.events.addCommand('tpcoord', (player : PlayerMp, _ , ...args) => {
     }
     player.position = new mp.Vector3(x[0] , x[1] , x[2]);
     player.outputChatBox(`Вы были успешно телепортированы на координаты ${x[0]} ${x[1]} ${x[2]}`);
-    console.log('[SERVER] tpcoord was called');
+    console.log(`[SERVER] tpcoord был вызван игроком ${player.name}`);
 });
