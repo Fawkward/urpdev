@@ -1,4 +1,4 @@
-mp.events.addCommand('veh', (player : PlayerMp, _ , ...args) => {
+mp.events.addCommand('veh', (player : PlayerMp, _ : string, ...args : string[]) => {
     if (!args.some(x => x)){ 
         player.outputChatBox("/veh <car> <color1> <color2> <numberPlate>");
         return;
@@ -12,7 +12,7 @@ mp.events.addCommand('veh', (player : PlayerMp, _ , ...args) => {
     console.log(`[SERVER] veh был вызван огроком ${player.name}`);
 });
 
-mp.events.addCommand('tpcoord', (player : PlayerMp, _ , ...args) => {
+mp.events.addCommand('tpcoord', (player : PlayerMp, _ : string, ...args : string[]) => {
     if(args.length < 3){
         player.outputChatBox("/tpcoord <x> <y> <z>");
         return;
@@ -27,4 +27,11 @@ mp.events.addCommand('tpcoord', (player : PlayerMp, _ , ...args) => {
     player.position = new mp.Vector3(x[0] , x[1] , x[2]);
     player.outputChatBox(`Вы были успешно телепортированы на координаты ${x[0]} ${x[1]} ${x[2]}`);
     console.log(`[SERVER] tpcoord был вызван игроком ${player.name}`);
+
 });
+
+mp.events.addCommand('log', (player : PlayerMp, _ : string, ...args : string[]) =>{
+    console.log(`${player.name}: ${_}`);
+});
+
+
