@@ -1,2 +1,2 @@
-import './commands'
-import './deletecars'
+import './commands';
+import './deletecars';
