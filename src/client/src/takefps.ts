@@ -21,5 +21,5 @@ class FPSCalculator {
 export const FPS = new FPSCalculator();
 
 mp.keys.bind(0x71, true, () => {
-  mp.events.callRemote('C2S:Fps:Send', FPS.get());
+  mp.events.callRemoteProc('RPC::C2S:Fps:Send', FPS.get());
 });
