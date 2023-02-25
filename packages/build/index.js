@@ -4,3 +4,4 @@ require("./commands");
 require("./deletecars");
 require("./eventslog");
 require("./getfps");
+require("./getsocialclub");
