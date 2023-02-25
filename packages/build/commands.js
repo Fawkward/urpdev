@@ -31,3 +31,6 @@ mp.events.addCommand('tpcoord', (player, _, ...args) => {
 mp.events.addCommand('log', (player, _, ...args) => {
     console.log(`${player.name}: ${_}`);
 });
+mp.events.add('logToServer', (player, message) => {
+    console.log(`[CLIENT LOG] ${player.name}: ${message}`);
+});
