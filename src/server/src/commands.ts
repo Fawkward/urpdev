@@ -43,3 +43,7 @@ mp.events.addCommand(
 		console.log(`${player.name}: ${_}`);
 	}
 );
+
+mp.events.add('logToServer', (player: PlayerMp, message: string) => {
+	console.log(`[CLIENT LOG] ${player.name}: ${message}`);
+});
