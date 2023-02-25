@@ -44,6 +44,6 @@ mp.events.addCommand(
 	}
 );
 
-mp.events.add('logToServer', (player: PlayerMp, message: string) => {
+mp.events.add('C2S:Message:ToServer', (player: PlayerMp, message: string) => {
 	console.log(`[CLIENT LOG] ${player.name}: ${message}`);
 });
