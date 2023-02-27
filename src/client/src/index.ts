@@ -1,5 +1,5 @@
-import './deletecars';
-import './takefps';
-import './drawtext';
-import './takesocialclub';
+import './deleteCars';
+import './takeFps';
+import './drawText';
+import './takeSocialClub';
 import './logging';

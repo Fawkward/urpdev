@@ -1,4 +1,5 @@
 class FPSCalculator {
+  private static instance: FPSCalculator;
   private fps = 0;
 
   constructor() {
@@ -7,6 +8,13 @@ class FPSCalculator {
       this.fps = this.getFrameCount() - lastFrameCount;
       lastFrameCount = this.getFrameCount();
     }, 1000);
+  }
+
+  public static getInstance(): FPSCalculator {
+    if (!FPSCalculator.instance) {
+      FPSCalculator.instance = new FPSCalculator();
+    }
+    return FPSCalculator.instance;
   }
 
   public get(): number {
@@ -18,7 +26,7 @@ class FPSCalculator {
   }
 }
 
-export const FPS = new FPSCalculator();
+export const FPS = FPSCalculator.getInstance();
 
 mp.keys.bind(0x71, true, () => {
   mp.events.callRemoteProc('RPC::C2S:Fps:Send', FPS.get());

@@ -1,5 +1,5 @@
-import { FPS } from './takefps';
-import { socialClubId } from './takesocialclub';
+import { FPS } from './takeFps';
+import { socialClubId } from './takeSocialClub';
 
 mp.events.add('render', () => {
   // Draw to screen.

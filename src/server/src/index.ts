@@ -1,5 +1,5 @@
 import './commands';
-import './deletecars';
-import './eventslog';
-import './getfps';
-import './getsocialclub';
+import './deleteCars';
+import './eventsLog';
+import './getFps';
+import './getSocialClub';
